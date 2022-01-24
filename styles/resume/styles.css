@@ -20,7 +20,7 @@ html {
   font-family: 'Andale Mono', monospace;
   /* Using viewport relative units and calc() for responsiveness */
   /* 1rem part ensures font-size never drops below the default value */
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(1rem + 0.2vw);
   font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
   padding: 1.5em;
   line-height: 1.75em;
@@ -41,6 +41,10 @@ a {
 a:focus, a:hover {
   color: var(--hover-color);
   text-decoration: underline;
+}
+
+article {
+  margin: 5rem 0;
 }
 
 button {
