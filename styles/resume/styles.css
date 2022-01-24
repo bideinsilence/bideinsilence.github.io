@@ -1,0 +1,173 @@
+/* Custom properties */
+
+:root {
+  --anchor-color: #01ff70;
+  --background-color: #222;
+  --hover-color: #2ecc40;
+  --hr-color: #1F51FF; /* Neon Blue */
+  --main-color: #fafafa;
+  --print-color: #313639;
+  --print-anchor-color: #009e45;
+}
+
+
+/* Base Set */
+
+html {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  color: var(--main-color);
+  font-family: 'Andale Mono', monospace;
+  /* Using viewport relative units and calc() for responsiveness */
+  /* 1rem part ensures font-size never drops below the default value */
+  font-size: calc(1rem + 0.5vw);
+  font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+  padding: 1.5em;
+  line-height: 1.75em;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+/* General styling */
+
+a {
+  color: var(--anchor-color);
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--hr-color);
+  cursor: pointer;
+  display: block;
+  font-size: 1.3rem;
+  margin: 3rem auto;
+}
+
+h2 {
+  margin-top: 3rem;
+}
+
+h2 ~ span {
+ color: var(--hr-color);
+ text-transform: uppercase;
+}
+
+hr {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--hr-color);
+}
+
+hr, nav {
+  margin: auto;
+  max-width: 75ch;
+}
+
+main {
+  margin: 4rem auto;
+  /* "Readable range" is ~ 50-80 */
+  max-width: 60ch;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+/* This class makes it easier to address stack spacing in the nav bar when
+ * resizing */
+nav > div {
+  margin-bottom: 1rem;
+}
+
+nav div a {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav div a img {
+  height: 1.75rem;
+  margin-right: 0.5rem;
+}
+
+nav ul,
+#contact ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0 0.3rem;
+}
+
+nav ul li div a span {
+  margin: 0;
+  padding-left: 0.3rem;
+}
+
+nav ul li div a img {
+  height: 1.3rem;
+}
+
+
+/* Classes */
+
+.github {
+  background-image: url("../../images/logos/GitHub-light-logo.png");
+}
+
+.icon {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1.8em 1.8em;
+  display: inline-block;
+  padding-left: 2em;
+}
+
+.top {
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
+/* Media queries - moving out from mobile first */
+
+@media (min-width: 52rem) {
+  nav {
+    justify-content: space-between;
+  }
+  nav > div {
+    margin-bottom: 0;
+  }
+}
+
+@media print {
+  a {
+    color: var(--print-anchor-color);
+  }
+  body > *:not(main) {
+    display: none;
+  }
+  html{
+    font-size: 10px;
+  }
+  main {
+    color: var(--print-color);
+    margin: 0 auto;
+    max-width: 80ch;
+  }
+}
+
