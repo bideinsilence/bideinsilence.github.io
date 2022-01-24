@@ -48,8 +48,7 @@ article {
 }
 
 h1,
-h2,
-section + hr {
+h2 {
   margin-top: 2rem;
 }
 
@@ -251,7 +250,11 @@ section {
 
 /* Utility classes */
 
-
+/* This class makes the jump to ID links have a litte extra space from the top
+ * of the viewport. */
+.extra-top-space {
+  padding-top: 2rem;
+}
 
 /* Media queries - moving out from mobile first */
 
