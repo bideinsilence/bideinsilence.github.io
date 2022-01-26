@@ -130,14 +130,6 @@
   <button>Print</button>
   <div class="top"><a href="#top">Back to Top</a></div>
   <!-- Print resume button -->
-  <script>
-    let printButton = document.querySelector("button");
-
-    function printPage() { window.print(); }
-
-    printButton.addEventListener("click", printPage);
-    // For IE < 9
-    //printButton.onclick = printPage;
-  </script>
+  <script src="../scripts/print.js"></script>
 </body>
 </html>
