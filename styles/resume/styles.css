@@ -49,6 +49,7 @@ article {
 
 button {
   background-color: var(--hr-color);
+  border-radius: 5px;
   cursor: pointer;
   display: block;
   font-size: 1.3rem;
