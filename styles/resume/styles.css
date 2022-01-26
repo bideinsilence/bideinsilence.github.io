@@ -167,11 +167,12 @@ nav ul li div a img {
   }
   html{
     font-size: 10px;
+    line-height: 1.6em;
   }
   main {
     color: var(--print-color);
     margin: 0 auto;
-    max-width: 80ch;
+    max-width: 100ch;
   }
 }
 
