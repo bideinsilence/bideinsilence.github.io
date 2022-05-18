@@ -4,7 +4,7 @@
   --accent-color: #0381f4;
   --anchor-color: black;
   --background-color: #e6e6cc;
-  --card-color: #eeeedd;
+  --card-color: #f3ebe1;
 }
 
 
@@ -12,6 +12,7 @@
 
 html {
   background-color: var(--background-color);
+  background-image: url("../images/paper-background.png");
   box-sizing: border-box;
   font-family: 'EB Garamond', serif;
   /* Using viewport relative units and calc() for responsiveness */
@@ -194,6 +195,11 @@ section {
 #learn dd {
   margin-bottom: 1rem;
   margin-left: 0;
+}
+
+/* For anchor tags below project images */
+#projects dd p a {
+  font-weight: bold;
 }
 
 #projects dl dd {
