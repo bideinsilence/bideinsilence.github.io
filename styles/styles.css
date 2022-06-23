@@ -198,7 +198,6 @@ section {
     margin-left: 0;
 }
 
-/* For anchor tags below project images */
 #projects dd a {
     font-weight: bold;
 }
@@ -211,7 +210,7 @@ section {
 }
 
 /* Style items in the project descriptive list as cards */
-#projects dl > div {
+#projects dl div {
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: var(--card-color);
@@ -221,18 +220,18 @@ section {
     text-align: center;
 }
 
+/* For text before images in the project descriptive list's titles */
+#projects dl dt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top:  1rem;
+}
+
 #projects dl dt img {
     border-radius: 2px;
     margin-top: 1.5rem;
     max-width: 100%;
 }
-
-/* For text before images in the project descriptive list's titles */
-/*#projects dt > div {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 1rem;
-}*/
 
 #technologies ul {
     display: grid;
