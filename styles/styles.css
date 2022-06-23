@@ -17,7 +17,7 @@ html {
     box-sizing: border-box;
     font-family: 'EB Garamond', serif;
     /* Using viewport relative units and calc() for responsiveness */
-    /* 1rem part ensures font-size never drops below the default value */
+    /* 1rem ensures font-size never drops below the default value */
     font-size: calc(1rem + 0.5vw);
     font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
     padding: 1.5em;
@@ -80,7 +80,7 @@ nav {
 
 /* This class makes it easier to address stack spacing in the nav bar when
  * resizing */
-nav>div {
+nav > div {
     margin-bottom: 1rem;
 }
 
@@ -199,21 +199,19 @@ section {
 }
 
 /* For anchor tags below project images */
-#projects dd p a {
+#projects dd a {
     font-weight: bold;
 }
 
 #projects dl dd {
-    margin: 0;
-}
-
-#projects dl dd p {
     display: flex;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 /* Style items in the project descriptive list as cards */
-#projects dl>div {
+#projects dl > div {
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: var(--card-color);
@@ -230,11 +228,11 @@ section {
 }
 
 /* For text before images in the project descriptive list's titles */
-#projects dt>div {
+/*#projects dt > div {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 1rem;
-}
+}*/
 
 #technologies ul {
     display: grid;
