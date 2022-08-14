@@ -1,0 +1,122 @@
+
+                        Public libraries are my favorite governmental
+                        institutions and we have a great network of recently
+                        updated libraries in our area. So to build a strong
+                        foundation in the basics of using the Django web
+                        framework, I've been cloning the Spokane Public
+                        Library’s website with Django. I intend to consider this
+                        project complete once I’ve reproduced most of the
+                        essential features of the library's catalog site;
+                        search, user in/sign out, librarian accounts, access to
+                        the Django admin, etc… 
+
+
+Public libraries are my favorite governmental institutions and we have a great
+network of recently updated libraries in our area. So to build a strong
+foundation in the basics of using the Django web framework, I've been cloning
+the Spokane Public Library's website with Django.
+
+To use the Django catalog application:
+
+Visit the app hosted on Heroku (Please allow a few seconds for the dyno to spin
+up and reply): https://django-spokane-library.herokuapp.com/
+
+Or, clone the repository and:
+
+Setup a python virtual environment
+Run pip install -r requirements.txt
+Run python manage.py migrate
+Run python manage.py runserver
+The catalog app will be hosted on a local server at http://127.0.0.1:8000/
+When done, quit the server with CONTROL-C
+
+
+As reproducing the entire website would be a massive undertaking, most of the
+links just lead to the top of the page. However, clicking on BOOKS, MOVIES, MORE
+or Search The Catalog will take you to the Catalog/Search Home page. Also,
+clicking SIGN IN / SIGN UP will take you to the sign-in page.
+
+Users can review their checked out books.
+Librarians can add books and authors and renew books.
+Admins can create and edit books, authors, and genres, loan, return, and renew
+books, and create and manage users, groups, permissions, and passwords.
+
+Test accounts:
+
+testbob, password: spokanelibrary
+testsally, password: spokanelibrary
+testlibrarian, password: djangospokane
+Admin account, localhost:8000/admin, or
+https://django-spokane-library.herokuapp.com/admin
+user: bideinsilence
+password: ahwpYSJ2yYe2VG
+
+
+See my recreation of only the homepage live at:
+https://bideinsilence.github.io/django_spokane_library/
+
+
+How It's Made:
+
+Tech used: HTML, CSS, JavaScript, and the python Django framework
+
+I originally built the backend catalog logic before moving on to recreating the
+Spokane Library's homepage. I naively expected the Library's site to be easy to
+download and copy, but upon inspecting their source code, I discovered that the
+original site is an impressive amount of div soup that appears to have been
+built with WordPress. So, I decided against just copying their code and chose to
+take the opportunity to practice my html and css skills by rebuilding a near
+pixel perfect copy of their homepage from scratch.
+
+Next steps:
+    - Add search functionality
+    - Update the Language link/button on the catalog page
+    - Update the SIGN IN / SIGN UP on the catalog page to change with sign-in or
+      sign-out
+    - Have the sing-in and sign-out buttons more faithfully recreate the
+      original source's path redirection
+    - Update the catalog page and other pages to more closely recreate the
+      appearance of similar pages from the source.
+    - Add drop-down menus
+    - Make hamburger menu icon a functional hamburger menu
+    - And more before I reach the point of considering this an essential
+      features complete project application.
+
+
+Optimizations
+
+My library homepage is much smaller and more performant than the Spokane Library
+site.
+
+The Spokane Library's homepage footer is built with blocks that are sized with
+different percentage widths and disappear and reappear depending on the size of
+the viewport through which the site is viewed. I borrowed some of the same
+techniques to make my version a more faithful recreation, but If I was to build
+the original site myself I would build the footer (and still may build it) with
+CSS grid for a simpler, easier to understand structure, and nearly similar
+looking footer that would just move various blocks around as the viewport size
+changes.
+
+I would also build the site with a dynamically sized responsive root font,
+something like:
+
+    /* 1rem ensures font-size never drops below the default value */
+    font-size: calc(1rem + 0.5vw);
+    font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+
+rather than adjusting the font size at various breakpoints as the original site
+does.
+
+
+Lessons Learned:
+
+So far I've learned so much about how to recreate a website and make it look
+like it's source material, how to build a functional web application with user
+authentication, how to host it, and how to connect it all to a simple database.
+I now undoubtedly have an appreciate for the scale of project of this magnitude
+and understand why sites such as this are built by team and or with templates
+and an application such as WordPress. If I were to start over, I would either
+keep my library recreation to a much more modest version as a proof of concept
+Spokane Library website with my own template and design, or just build a
+different minimum viable product application of my own need or imagination.
+
