@@ -134,7 +134,7 @@ nav ul li div a img {
 /* Classes */
 
 .github {
-    background-image: url("../../images/logos/GitHub-light-logo.png");
+    background-image: url("../../images/GitHub-light-logo.png");
 }
 
 .icon {
@@ -151,6 +151,9 @@ nav ul li div a img {
     text-align: center;
 }
 
+.underline {
+    text-decoration: underline;
+}
 
 /* Media queries - moving out from mobile first */
 

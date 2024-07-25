@@ -130,7 +130,7 @@ section {
 }
 
 .github {
-    background-image: url("../images/logos/GitHub-logo.png");
+    background-image: url("../images/GitHub-logo.png");
 }
 
 .icon {
@@ -146,22 +146,17 @@ section {
     text-align: center;
 }
 
-.twitter {
-    background-image: url("../images/logos/Twitter-blue-logo.svg");
+.mastodon {
+    background-image: url("../images/mastodon-purple.svg");
 }
 
 
 /* ID selectors */
 
-#build h1,
-#learn h1 {}
-
-#build li,
 #interests li {
     list-style-type: "$_   ";
 }
 
-#build li::marker,
 #interests li::marker {
     color: var(--accent-color);
     font-weight: normal;
@@ -187,15 +182,6 @@ section {
 #contact ul li img {
     height: 1.5rem;
     padding-right: 0.2rem;
-}
-
-#learn dt {
-    font-weight: bold;
-}
-
-#learn dd {
-    margin-bottom: 1rem;
-    margin-left: 0;
 }
 
 #projects dd a {
@@ -235,6 +221,16 @@ section {
     max-width: 100%;
 }
 
+/* No longer used
+#learn dt {
+    font-weight: bold;
+}
+
+#learn dd {
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+
 #technologies ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
@@ -252,6 +248,7 @@ section {
     height: 2.5rem;
     padding: 0.3rem;
 }
+*/
 
 
 /* Utility classes */
@@ -260,6 +257,10 @@ section {
  * of the viewport. */
 .extra-top-space {
     padding-top: 2rem;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* Media queries - moving out from mobile first */
