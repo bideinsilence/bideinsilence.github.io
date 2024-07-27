@@ -63,10 +63,6 @@ h2 {
     margin-top: 3rem;
 }
 
-h2~span {
-    color: var(--hr-color);
-    text-transform: uppercase;
-}
 
 hr {
     border-top: 1px solid var(--main-color);
@@ -92,9 +88,9 @@ nav {
     margin-bottom: 0.5rem;
 }
 
-/* This class makes it easier to address stack spacing in the nav bar when
+/* This rule makes it easier to address stack spacing in the nav bar when
  * resizing */
-nav>div {
+nav > div {
     margin-bottom: 1rem;
 }
 
@@ -132,6 +128,10 @@ nav ul li div a img {
 
 
 /* Classes */
+.date {
+    color: var(--hr-color);
+    text-transform: uppercase;
+}
 
 .github {
     background-image: url("../../images/GitHub-light-logo.png");
